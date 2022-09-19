@@ -391,5 +391,5 @@ plot.cdftest <- function(x, ..., style=c("cdf", "PP", "QQ"),
                                          main="")))
            abline(0,1, lwd=lwd0, col=col0, lty=lty0)           
          })
-  return(invisible(NULL))
+  return(invisible(x))
 }

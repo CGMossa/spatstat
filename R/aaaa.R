@@ -41,5 +41,5 @@ print.intermaker <- function(x, ...) {
                  b$name,
                  explain)
   splat(blah)
-  return(invisible(NULL))
+  return(invisible(x))
 }

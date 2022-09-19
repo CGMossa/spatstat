@@ -82,5 +82,5 @@ print.summary.dppm <- function(x, ...) {
   splat(if(x$stationary) "Strength" else "(Average) strength",
         "of repulsion:", signif(x$repul, digits))
   
-  return(invisible(NULL))
+  return(invisible(x))
 }

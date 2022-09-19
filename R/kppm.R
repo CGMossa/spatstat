@@ -1589,7 +1589,7 @@ plot.kppm <- local({
       what <- what[!inappropriate]
       if(length(what) == 0){
         message("Nothing meaningful to plot. Exiting...")
-        return(invisible(NULL))
+        return(invisible(x))
       }
     }
     pause <- pause && (length(what) > 1)
@@ -1610,7 +1610,7 @@ plot.kppm <- local({
                       dmain=c(xname, "Fitted cluster"))
              })
     if(pause) par(opa)
-    return(invisible(NULL))
+    return(invisible(x))
   }
 
   plot.kppm

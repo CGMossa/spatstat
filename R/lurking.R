@@ -623,7 +623,7 @@ plot.lurk <- function(x, ..., shade="grey") {
               list(...),
               list(lty=2)))
   })
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 #'  print a lurk object

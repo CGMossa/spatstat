@@ -1100,7 +1100,7 @@ print.leverage.ppm <- function(x, ...) {
   ## for compatibility we retain the x$fit usage
   if(x$fit.is.poisson %orifnull% is.poisson(x$fit))
     splat("\nAverage value:", lev$ave)
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 print.influence.ppm <- function(x, ...) {
@@ -1109,7 +1109,7 @@ print.influence.ppm <- function(x, ...) {
   splat("for model:", fitname)
   splat("\nExact values:")
   print(x$infl)
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 ## >>>>>>>>>>>>>>>>  SUBSET METHODS <<<<<<<<<<<<<<<<<<<<<

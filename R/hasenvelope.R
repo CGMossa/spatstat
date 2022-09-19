@@ -16,7 +16,7 @@ hasenvelope <- function(X, E=NULL) {
 print.hasenvelope <- function(x, ...) {
   NextMethod("print")
   splat("[Object contains simulation envelope data]")
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 envelope.hasenvelope <- function(Y, ..., Yname=NULL) {

@@ -167,7 +167,7 @@ print.localpcfmatrix <- function(x, ...) {
   cat(paste("pcf estimates for", nc, ngettext(nc, "point", "points"), "\n"))
   rval <- attr(x, "r")
   cat(paste("r values from 0 to", max(rval), "in", nr, "steps\n"))
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 plot.localpcfmatrix <- function(x, ...) {

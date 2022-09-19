@@ -98,7 +98,7 @@ print.fii <- function(x, ...) {
   sx <- summary(x)
   do.call(print.summary.fii,
           resolve.defaults(list(x=sx, brief=TRUE), list(...)))
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 print.summary.fii <- local({
@@ -108,8 +108,8 @@ print.summary.fii <- local({
     PrintIt(x, ...)
   }
   
-  PrintIt <- function(x, ..., prefix="Interaction: ",
-                      banner=TRUE,
+  PrintIt <- function(x, ..., prefix = "Interaction: ",
+                      banner = TRUE,
                       family = waxlyrical('extras'),
                       brief = !family,
                       tiny = !waxlyrical('errors')) {
@@ -142,22 +142,22 @@ print.summary.fii <- local({
               splat(paste0(hdi, ":"))
               print(xpi)
             }
-          } 
+          }
         } else {
           splat(x$header)
           print(x$printable)
-        } 
+        }
       }
     }
-    if(!brief) {
+    if (!brief) {
       co <- x$coefs[x$Vnames[!x$IsOffset]]
-      if(length(co) > 0) {
+      if (length(co) > 0) {
         parbreak(terselevel)
         splat("Relevant coefficients:")
         print(co)
       }
     }
-    return(invisible(NULL))
+    return(invisible(x))
   }
 
   print.summary.fii
@@ -224,7 +224,7 @@ plot.fii <- function(x, ...) {
   inte <- x$interaction
   if(is.poisson.interact(inte)) {
     message("Poisson interaction; nothing plotted")
-    return(invisible(NULL))
+    return(invisible(x))
   }
   plfun <- inte$plot %orifnull% inte$family$plot
   if(is.null(plfun)) 

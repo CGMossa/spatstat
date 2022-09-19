@@ -108,7 +108,7 @@ plot.ssf <- function(x, ..., how=c("smoothed", "nearest", "points"),
                    resolve.defaults(list(quote(y)), 
 				    otherargs,
                                     list(main=xname)))
-    if(is.null(out)) return(invisible(NULL))
+    if(is.null(out)) return(invisible(x))
     return(out)
   }
   # image plot

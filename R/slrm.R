@@ -354,7 +354,7 @@ print.slrm <- function(x, ...) {
   print(x$CallInfo$formula)
   splat("Fitted coefficients:")
   print(coef(x))
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 summary.slrm <- function(object, ...) {

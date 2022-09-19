@@ -435,5 +435,5 @@ print.diagppm <- function(x, ...) {
       splat("Null standard deviation of smoothed Pearson residual field:",
             signif(sdp, 4))
   }
-  return(invisible(NULL))
+  return(invisible(x))
 }

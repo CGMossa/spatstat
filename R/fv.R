@@ -241,7 +241,7 @@ print.fv <- local({
       if(!is.null(ledge))
         splat(ledge)
     }
-    return(invisible(NULL))
+    return(invisible(x))
   }
 
   print.fv

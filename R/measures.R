@@ -157,7 +157,7 @@ print.msr <- function(x, ...) {
       }
     }
   }
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 summary.msr <- function(object, ...) { print(object) }

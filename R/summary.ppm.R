@@ -324,7 +324,7 @@ print.summary.ppm <- function(x, ...) {
   if(is.null(x$args)) {
     # this is the quick version
     splat(x$name)
-    return(invisible(NULL))
+    return(invisible(x))
   }
 
   # otherwise - full details
@@ -384,14 +384,14 @@ print.summary.ppm <- function(x, ...) {
 
   # print summary of quadrature scheme
   if(is.null(x$quad))
-    return(invisible(NULL))
+    return(invisible(x))
   ruletextline()
   print(x$quad)
 
 
   ## start printing trend information
   if(is.null(x$no.trend))
-    return(invisible(NULL))
+    return(invisible(x))
 
   ruletextline()
   splat("FITTED MODEL:")
@@ -423,7 +423,7 @@ print.summary.ppm <- function(x, ...) {
   # ----- trend --------------------------
 
   if(length(x$trend) == 0)
-    return(invisible(NULL))
+    return(invisible(x))
   
   parbreak()
   splat(paste0("---- ", x$trend$name, ": ----"))
@@ -527,7 +527,7 @@ print.summary.ppm <- function(x, ...) {
     splat("[Validity of model could not be checked]")
   }
   
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 no.trend.ppm <- function(x) {

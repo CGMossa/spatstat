@@ -61,7 +61,7 @@ print.densityfun <- function(x, ...) {
   X <- get("X", envir=environment(x))
   print(X, ...)
   cat("Optional argument:", "drop=TRUE", fill=TRUE)
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 ## Method for as.im

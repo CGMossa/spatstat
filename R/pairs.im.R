@@ -113,7 +113,7 @@ plot.plotpairsim <- function(x, ...) {
                              list(...),
                              list(pch=".")))
   }
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 print.plotpairsim <- function(x, ...) {

@@ -361,7 +361,7 @@ print.quadrattest <- function(x, ...) {
                               list(...),
                               list(brief=TRUE)))
    }
-   return(invisible(NULL))
+   return(invisible(x))
 }
 
 plot.quadrattest <- local({
@@ -377,7 +377,7 @@ plot.quadrattest <- local({
               resolve.defaults(list(x=quote(tests)),
                                list(...),
                                list(main=xname)))
-      return(invisible(NULL))
+      return(invisible(x))
     }
     Xcount <- attr(x, "quadratcount")
 
@@ -411,7 +411,7 @@ plot.quadrattest <- local({
     dotext(0, -f,  signif(x$residuals,2)[ok],
            x0, y0, ra, textargs,
            ...)
-    return(invisible(NULL))
+    return(invisible(x))
   }
  
   dotext <- function(dx, dy, values, x0, y0, ra, textargs, ...) {

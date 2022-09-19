@@ -123,7 +123,7 @@ print.summary.objsurf <- function(x, ...) {
     cat("Selected parameter values (optpar):\n")
     cat(paste("\t", paste(nama, "=", optpar, collapse=", "), "\n"))
   })
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 

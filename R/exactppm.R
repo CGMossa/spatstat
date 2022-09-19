@@ -82,7 +82,7 @@ print.exactppm <- function(x, ...) {
       }
     }
   })
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 is.poisson.exactppm <- function(x) { TRUE }

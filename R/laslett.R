@@ -184,7 +184,7 @@ print.laslett <- function(x, ...) {
   cat("\n")
   type <- x$type %orifnull% "lower"
   cat(npoints(x$TanNew), type, "tangent points found.", fill=TRUE)
-  return(invisible(NULL))
+  return(invisible(x))
 }
   
 plot.laslett <- function(x, ...,

@@ -54,7 +54,7 @@ print.bw.optim <- function(x, ...) {
   y <- as.numeric(x)
   names(y) <- attr(x, "labels")$hname
   print(y, ...)
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 as.data.frame.bw.optim <- function(x, ...) {

@@ -55,7 +55,7 @@ print.Smoothfun <- function(x, ...) {
       "values", "interpolated from", fill=TRUE)
   X <- get("X", envir=environment(x))
   print(X, ...)
-  return(invisible(NULL))
+  return(invisible(x))
 }
 
 ## Method for as.im
